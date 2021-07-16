@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
 
 //Enviar mail demora async
-const send = async ({mail, asunto = "Confirmacion de registro", cuerpo})=>{
+const send = async ({mail, asunto, cuerpo})=>{
     try {
         const transporter = nodemailer.createTransport({
             /*host:"smtp.gmail.email",

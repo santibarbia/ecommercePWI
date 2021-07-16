@@ -11,7 +11,10 @@ dotenv.config();
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+const registroRouter = require('./routes/registro');
+const loginRouter = require('./routes/login');
+const catalogoRouter = require('./routes/catalogo');
+const adminRouter = require('./routes/admin/adminIndex');
 var app = express();
 
 // view engine setup
@@ -32,6 +35,11 @@ app.use(session({
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/registro',registroRouter);
+app.use('/login',loginRouter);
+app.use('/catalogo',catalogoRouter);
+app.use('/admin',adminRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
