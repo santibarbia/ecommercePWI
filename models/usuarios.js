@@ -2,13 +2,13 @@ const pool = require('../utils/bd');
 
 
 const getAll  = async()=>{
-    const query = "SELECT nombre, username, mail, telefono FROM ?? WHERE habilitado = 1 AND eliminado = 0";
+    const query = "SELECT id,nombre, username, mail, telefono FROM ?? WHERE habilitado = 1 AND eliminado = 0";
     const params = [process.env.T_USUARIOS]
     return await pool.query(query, params);
 }
 
 const getSingle = async(id)=>{
-    const query = "SELECT nombre, username, mail, telefono FROM ?? WHERE id = ? AND eliminado = 0";
+    const query = "SELECT * FROM ?? WHERE id = ? AND eliminado = 0";
     const params = [process.env.T_USUARIOS,id];
     return await pool.query(query, params);
 

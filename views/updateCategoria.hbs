@@ -1,0 +1,19 @@
+<div class="container-fluid bg-light" style="height:100vh">
+    <div class="row justify-content-center aling-item-center" style="height:100vh">
+        <div class="col-7 text-dark">
+            <form method="POST" action="/admin/categoria/update/{{categoria.id}}">
+                <div class="mb-3">
+                    <label for="categoria" class="form-label">Ingrese Categoria<span class="text-danger">*</span></label>
+                    <input type="text" value="{{categoria.categoria}}" class="form-control" id="categoria" name="categoria">
+                </div>
+                <div class="mb-3">
+                    <label for="descripcion" class="form-label">Ingrese Descripcion<span class="text-danger">*</span></label>
+                    <input type="text" value="{{categoria.descripcion}}" class="form-control" id="descripcion" name="descripcion">
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary mt-2">Editar Categoria</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

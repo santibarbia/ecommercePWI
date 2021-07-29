@@ -15,6 +15,10 @@ const registroRouter = require('./routes/registro');
 const loginRouter = require('./routes/login');
 const catalogoRouter = require('./routes/catalogo');
 const adminRouter = require('./routes/admin/adminIndex');
+const adminUsuariosRouter = require('./routes/admin/adminUsuario');
+const adminProductoRouter = require('./routes/admin/adminProducto');
+const adminCategoriaRouter = require('./routes/admin/adminCategoria');
+const carritoRouter = require('./routes/users/carrito');
 var app = express();
 
 // view engine setup
@@ -38,7 +42,13 @@ app.use('/users', usersRouter);
 app.use('/registro',registroRouter);
 app.use('/login',loginRouter);
 app.use('/catalogo',catalogoRouter);
+
+app.use('/users/carrito',carritoRouter);
+
 app.use('/admin',adminRouter);
+app.use('/admin/usuario',adminUsuariosRouter);
+app.use('/admin/producto',adminProductoRouter);
+app.use('/admin/categoria',adminCategoriaRouter);
 
 
 // catch 404 and forward to error handler

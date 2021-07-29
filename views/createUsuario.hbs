@@ -1,0 +1,45 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container justify-content-center">
+    <a class="navbar-brand" href="#">
+      <img src="/css/img/gigaphone_Logo.png" class="img-fluid" alt="">
+    </a>
+  </div>
+</nav>
+<div class="container-fluid bg-light" style="height:100vh">
+    <div class="row justify-content-center aling-item-center" style="height:100vh">
+        <div class="col-7 text-dark">
+            <form method="POST" action="/admin/usuario/create">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Ingrese nombre<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="nombre" name="nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Ingrese username<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="username" name="username">
+                </div>
+                <div class="mb-3">
+                    <label for="pass" class="form-label">Ingrese password<span class="text-danger">*</span></label>
+                    <input type="password" class="form-control" id="pass" name="pass">
+                </div>
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Ingrese telefono<span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" id="telefono" name="telefono">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Ingrese email<span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="email" name="email">
+                </div>
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Ingrese Rol<span class="text-danger">*</span></label>
+                    <select class="form-select" name="admin">
+                        <option value="0" selected>Usuario</option>
+                        <option value="1">Administrador</option>
+                    </select>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary mt-2">Crear usuario</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

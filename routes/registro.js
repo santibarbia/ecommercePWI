@@ -4,10 +4,12 @@ const {create,habilitar} = require('../models/usuarios');
 const sha1 = require('sha1');
 const {v4 : uuid} = require('uuid');
 const {send} = require('../services/mail');
+const modelCategoria= require('../models/categorias');
 const { validateRegistro } = require('../middlewares/usuario');
 
-const getRegistro = (req, res)=>{
-    res.render('registro');
+const getRegistro = async(req, res)=>{
+    const categoria = await modelCategoria.getAllCategorias();
+    res.render('registro',{categoria});
 }
 
 const registrate = async (req, res)=>{
@@ -42,7 +44,7 @@ const verify = async (req, res)=>{
 
 
 router.get('/',getRegistro);
-router.post('/create',validateRegistro, registrate)
+router.post('/',validateRegistro, registrate)
 router.get('/verify/:uid',verify);
 
 module.exports = router;

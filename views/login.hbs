@@ -1,2 +1,67 @@
-<h1>Hola desde login</h1>
-<h1>{{message}}</h1>
+<div class="wrap">
+    <!--Navbar-->
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <button id="primary-nav-button" type="button">Menu</button>
+                    <a href="index.html">
+                        <div class="logo">
+                            <img src="/css/img/gigaphone_Logo.png" class="img-fluid" alt="">
+                        </div>
+                    </a>
+                    <nav id="primary-nav" class="dropdown cf">
+                        <ul class="dropdown menu">
+                            <li class='active'><a href="/admin/producto/create">Crear Producto</a></li>
+
+                            <li><a class="scrollTo" data-scrollTo="blog" href="/admin/usuario">Usuarios</a></li>
+                            <li><a class="scrollTo" data-scrollTo="services" href="/admin/categoria">Categorias</a></li>
+                            <li><a class="scrollTo" data-scrollTo="contact" href="/catalogo">Catalogos</a></li>
+                        </ul>
+                    </nav><!-- / #primary-nav -->
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+
+
+
+<div class="container-fluid bg-light" style="height:100vh">
+    <div class="row justify-content-center aling-item-center mt-5" style="height:100vh">
+        <div class="col-7 text-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-heading">
+                            <span>#GigaphoneExperience</span>
+                            <h2>Inicia sesion</h2>
+                        </div>
+                    </div>
+                </div>
+                <form method="POST" action="/login">
+                    <div class="col-6 text-center">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Ingrese username<span
+                                    class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="username" name="username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="pass" class="form-label">Ingrese password<span
+                                    class="text-danger">*</span></label>
+                            <input type="password" class="form-control" id="pass" name="pass">
+                        </div>
+
+                        <button type="submit"
+                                class="btn btn-primary">Iniciar Sesion</button>
+                                <div class="row">
+                                   <span>{{message}}</span> 
+                                </div>
+                        
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>

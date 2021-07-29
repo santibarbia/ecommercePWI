@@ -1,1 +1,79 @@
-<h1>Catalogo Home</h1>
+<section class="featured-places" id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <span>#GigaphoneExperience</span>
+                    <h2>Nuestros mejores productos</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10 align-item-center">
+                <form action="/catalogo" method="post">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-8">
+                                <label for="buscar" class="form-label">Ingrese nombre<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="buscar" id="buscar"
+                                    placeholder="Ingrese el nombre del producto">
+                            </div>
+                            <div class="col-4">
+                                <button type="submit" class="btn-primary form-control">Buscar 🔎</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+
+
+        </div>
+
+        <div class="row mt-3">
+            {{#each productos}}
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="featured-item">
+                    <div class="thumb">
+                        <img src="/images/{{uid}}" width="100" height="300" alt="">
+                        <div class="overlay-content">
+                            <ul>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                            </ul>
+                        </div>
+                        <div class="date-content">
+                            <h6>28</h6>
+                            <span>August</span>
+                        </div>
+                    </div>
+                    <div class="down-content">
+                        <h4>{{nombre}}</h4>
+                        <span>{{categoria}}</span>
+                        <p>{{descripcion}}</p>
+                        <div class="row">
+                            <div class="col-md-6 first-button">
+                                <div class="text-button">
+                                    <a href="#">Agregar al carrito</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-button">
+                                    <a href="/catalogo/single/{{id_producto}}">Ver descripción</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+
+        </div>
+    </div>
+</section>

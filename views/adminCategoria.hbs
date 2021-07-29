@@ -1,0 +1,64 @@
+<div class="wrap">
+    <!--Navbar-->
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <button id="primary-nav-button" type="button">Menu</button>
+                    <a href="index.html">
+                        <div class="logo">
+                            <img src="/css/img/gigaphone_Logo.png" class="img-fluid" alt="">
+                        </div>
+                    </a>
+                    <nav id="primary-nav" class="dropdown cf">
+                        <ul class="dropdown menu">
+                            <li class='active'><a href="/admin/categoria/create">Crear Categoria</a></li>
+                            
+                            <li><a class="scrollTo" data-scrollTo="blog" href="/admin/usuario">Usuarios</a></li>
+                            <li><a class="scrollTo" data-scrollTo="services" href="/admin/producto">Productos</a></li>
+                            <li><a class="scrollTo" data-scrollTo="contact" href="/catalogo">Catalogos</a></li>
+                        </ul>
+                    </nav><!-- / #primary-nav -->
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="wrap container bg-light" style="height:100vh">
+                <div class="row justify-content-center aling-item-center">
+
+
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Categoria</th>
+                                <th scope="col">Descripcion</th>
+                                <th scope="col">-</th>
+                                <th scope="col">-</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each categoria}}
+                            <tr>
+                                <td>{{id}}</td>
+                                <td>{{categoria}}</td>
+                                <td>{{descripcion}}</td>
+                                <td><a href="/admin/categoria/update/{{id}}"><button type="button"
+                                            class="btn btn-info">Editar</button></a></td>
+                                <td><a href="/admin/categoria/delete/{{id}}"><button type="button"
+                                            class="btn btn-outline-danger">Borrar</button></a></td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
