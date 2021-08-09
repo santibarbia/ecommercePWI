@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const dotenv = require('dotenv');
 const session = require('express-session');
+const {verifyUser,verifyAdmin} = require('./middlewares/auth');
 
 
 dotenv.config();
@@ -38,14 +39,14 @@ app.use(session({
 }));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/users',verifyUser, usersRouter);
 app.use('/registro',registroRouter);
 app.use('/login',loginRouter);
 app.use('/catalogo',catalogoRouter);
 
-app.use('/users/carrito',carritoRouter);
+app.use('/users/carrito',verifyUser,carritoRouter);
 
-app.use('/admin',adminRouter);
+app.use('/admin',verifyAdmin,adminRouter);
 app.use('/admin/usuario',adminUsuariosRouter);
 app.use('/admin/producto',adminProductoRouter);
 app.use('/admin/categoria',adminCategoriaRouter);

@@ -25,7 +25,7 @@ const login = async (req, res)=>{
             res.redirect('/admin');
             
         }else{
-            res.redirect('/catalogo')
+            res.redirect('/users')
         }
     }
     console.log(req.session);

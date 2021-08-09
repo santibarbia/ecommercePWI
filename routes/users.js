@@ -4,10 +4,10 @@ const router = express.Router();
 
 
 
-const showCarrito = (req, res) => {
-  res.render('carrito');
+const showUser = (req, res) => {
+  res.render('users');
 }
 
 
-router.get('/',showCarrito);
+router.get('/',showUser);
 module.exports = router;
