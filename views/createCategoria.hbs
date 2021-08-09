@@ -1,19 +1,56 @@
-<div class="container-fluid bg-light" style="height:100vh">
-    <div class="row justify-content-center aling-item-center" style="height:100vh">
-        <div class="col-7 text-dark">
-            <form method="POST" action="/admin/categoria/create">
-                <div class="mb-3">
-                    <label for="categoria" class="form-label">Ingrese Categoria<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="categoria" name="categoria">
+<div class="wrap">
+    <!--Navbar-->
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <button id="primary-nav-button" type="button">Menu</button>
+                    <a href="index.html">
+                        <div class="logo">
+                            <img src="/css/img/gigaphone_Logo.png" class="img-fluid" alt="">
+                        </div>
+                    </a>
+                    <nav id="primary-nav" class="dropdown cf">
+                        <ul class="dropdown menu">
+                            <li class='active'><a href="/admin/categoria">Volver atras</a></li>
+                        </ul>
+                    </nav><!-- / #primary-nav -->
                 </div>
-                <div class="mb-3">
-                    <label for="descripcion" class="form-label">Ingrese Descripcion<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="descripcion" name="descripcion">
-                </div>
-                <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-primary mt-2">Crear Categoria</button>
-                </div>
-            </form>
+            </div>
         </div>
+    </header>
+</div>
+
+
+<div class="container-fluid bg-light">
+    <div class="row justify-content-center aling-item-center">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <span>#GigaphoneExperience</span>
+                    <h2>Crear Categoria</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center aling-item-center">
+            <div class="col-7 text-dark mt-5">
+                <form method="POST" action="/admin/categoria/create">
+                    <div class="mb-3">
+                        <label for="categoria" class="form-label">Ingrese Categoria<span
+                                class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="categoria" name="categoria">
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcion" class="form-label">Ingrese Descripcion<span
+                                class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="descripcion" name="descripcion">
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-info mt-2">Crear Categoria</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
     </div>
 </div>

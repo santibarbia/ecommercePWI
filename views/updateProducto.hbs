@@ -1,11 +1,35 @@
-<nav class="navbar navbar-light bg-light">
-    <div class="container">
-        <a class="navbar-brand" href="#">
-            <img src="/css/img/gigaphone_Logo.png" class="img-fluid" alt="">
-        </a>
+<div class="wrap">
+    <!--Navbar-->
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <button id="primary-nav-button" type="button">Menu</button>
+                    <a href="index.html">
+                        <div class="logo">
+                            <img src="/css/img/gigaphone_Logo.png" class="img-fluid" alt="">
+                        </div>
+                    </a>
+                    <nav id="primary-nav" class="dropdown cf">
+                        <ul class="dropdown menu">
+                            <li class='active'><a href="/admin/producto">Volver atras</a></li>
+                        </ul>
+                    </nav><!-- / #primary-nav -->
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+
+<div class="container-fluid bg-light">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="section-heading">
+                <span>#GigaphoneExperience</span>
+                <h2>Actualizar Producto</h2>
+            </div>
+        </div>
     </div>
-</nav>
-<div class="container-fluid bg-light mt-5">
     <div class="row justify-content-center aling-item-center">
         <div class="col-7 text-dark">
             <form method="POST" action="/admin/producto/update/{{single.id}}" enctype="multipart/form-data">

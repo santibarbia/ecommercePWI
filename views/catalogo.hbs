@@ -1,4 +1,28 @@
-<section class="featured-places" id="blog">
+
+<div class="wrap">
+    <!--Navbar-->
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <button id="primary-nav-button" type="button">Menu</button>
+                    <a href="index.html">
+                        <div class="logo">
+                            <img src="css/img/gigaphone_Logo.png" alt="Venue Logo">
+                        </div>
+                    </a>
+                    <nav id="primary-nav" class="dropdown cf">
+                        <ul class="dropdown menu">
+                            <li class='active'><a href="/">Home</a></li>
+                            <li><a href="/users/carrito">Carrito</a></li>
+                        </ul>
+                    </nav><!-- / #primary-nav -->
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+<section class="featured-places mt-0" id="blog">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -12,15 +36,20 @@
         <div class="row">
             <div class="col-md-10 align-item-center">
                 <form action="/catalogo" method="post">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-8">
-                                <label for="buscar" class="form-label">Ingrese nombre<span class="text-danger">*</span></label>
+                    <div class="container section-heading">
+                        <div class="container justify-content-center">
+                            <span class="text-left">Buscar por nombre</span>
+                        </div>
+                        
+                        <div class="row">
+                            
+                            <div class="col-md-8">
+                                
                                 <input type="text" class="form-control" name="buscar" id="buscar"
                                     placeholder="Ingrese el nombre del producto">
                             </div>
-                            <div class="col-4">
-                                <button type="submit" class="btn-primary form-control">Buscar 🔎</button>
+                            <div class="col-md-3">
+                                <button type="submit" class="form-control btn-info">Buscar</button>
                             </div>
 
                         </div>
@@ -75,5 +104,71 @@
             {{/each}}
 
         </div>
+    </div>
+</section>
+
+<section id="contact">
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="about-veno">
+                        <div class="logo">
+                            <img src="css/img/gigaphone_Logo.png" alt="Venue Logo">
+                        </div>
+                        <p>Somos una empresa joven, que busca insertarse en el mercado con la posibilidad de vender
+                            productos tecnologicos
+                            a un precio accessible para todo el publico.
+                        </p>
+                        <ul class="social-icons">
+                            <li>
+                                <a href="https://www.instagram.com/gigaphone.gph/"><i class="fa fa-instagram"></i></a>
+                                <a href="/"><i class="fa fa-twitter"></i></a>
+                                <a href="/"><i class="fa fa-linkedin"></i></a>
+                                <a href="/"><i class="fa fa-rss"></i></a>
+                                <a href="/"><i class="fa fa-dribbble"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="useful-links">
+                        <div class="footer-heading">
+                            <h4>Más</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li><a href="/registro"><i class="fa fa-stop"></i>Registrate</a></li>
+                                    <li><a href="/login"><i class="fa fa-stop"></i>Login</a></li>
+
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="contact-info">
+                        <div class="footer-heading">
+                            <h4>Informacion</h4>
+                        </div>
+                        <p>Te dejamos nuestros datos de contacto, en caso de que quieras hablar con algun representante.</p>
+                        <ul>
+                            <li><span>Telefono:</span><a href="#">3513249117</a></li>
+                            <li><span>Email:</span><a href="#">gigaphone@gmail.com</a></li>
+                            <li><span>Direccion:</span><a href="#">Av. Gral. Paz 256, Cordoba.</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sub-footer">
+        <p>Copyright &copy; 2021 Gigaphone
+
+            - Design: <a rel="nofollow" href="#">Santiago Ibarbia</a></p>
     </div>
 </section>

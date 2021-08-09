@@ -13,36 +13,13 @@
                     </a>
                     <nav id="primary-nav" class="dropdown cf">
                         <ul class="dropdown menu">
-                            <li class='active'><a href="#">Popular</a></li>
-                            <li><a href="#">Most Visited</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Most Visited 1</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="#">Sub Visited Menu 1</a></li>
-                                            <li><a href="#">Sub Visited Two</a></li>
-                                            <li><a href="#">Sub Visited Menu 3</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Most Visited 2</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="#">Sub Visited Menu 4</a></li>
-                                            <li><a href="#">Sub Visited Five</a></li>
-                                            <li><a href="#">Sub Visited Menu 6</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Most Visited 3</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="#">Sub Visited Menu 7</a></li>
-                                            <li><a href="#">Sub Visited #8</a></li>
-                                            <li><a href="#">Sub Visited Menu 9</a></li>
-                                            <li><a href="#">Sub Visited #10</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a class="scrollTo" data-scrollTo="blog" href="#">Blog Entries</a></li>
-                            <li><a class="scrollTo" data-scrollTo="services" href="#">Our Services</a></li>
-                            <li><a class="scrollTo" data-scrollTo="contact" href="#">Contact Us</a></li>
+                            <li class='active'><a href="/">Home</a></li>
+                            <li><a href="/catalogo">Catalogo</a>
+                            <li><a class="scrollTo" data-scrollTo="blog" href="#">Productos Destacados</a></li>
+                            <li><a class="scrollTo" data-scrollTo="services" href="#">Nosotros</a></li>
+                            <li><a class="scrollTo" data-scrollTo="contact" href="#">Contactanos</a></li>
+                            <li><a href="/login">Iniciar Sesion</a></li>
+                            <li><a href="/registro">Registrate</a></li>
                         </ul>
                     </nav><!-- / #primary-nav -->
                 </div>
@@ -63,7 +40,7 @@
                     <h2>#GigaphoneExperience</h2>
                     <span>Encontra el equipo para vos</span>
                     <div class="blue-button">
-                        <a class="scrollTo" data-scrollTo="popular" href="#">Contactanos</a>
+                        <a class="scrollTo" data-scrollTo="contact" href="#">Contactanos</a>
                     </div>
                 </div>
             </div>
@@ -78,16 +55,17 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <span>Featured Places</span>
-                    <h2>Praesent nec dui sed urna</h2>
+                    <span>Productos</span>
+                    <h2>Nuestros mejores productos</h2>
                 </div>
             </div>
         </div>
         <div class="row">
+            {{#each producto}}
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="featured-item">
                     <div class="thumb">
-                        <img src="css/img/featured_item_1.jpg" alt="">
+                        <img src="/images/{{uid}}" width="300" height="350" alt="">
                         <div class="overlay-content">
                             <ul>
                                 <li><i class="fa fa-star"></i></li>
@@ -103,101 +81,25 @@
                         </div>
                     </div>
                     <div class="down-content">
-                        <h4>Lorem ipsum dolor</h4>
-                        <span>Category One</span>
-                        <p>Vestibulum id est eu felis vulputate hendrerit. Suspendisse dapibus turpis in dui pulvinar
-                            imperdiet. Nunc consectetur.</p>
+                        <h4>{{nombre}}</h4>
+                        <span>{{categoria}}</span>
+                        <p>{{descripcion}}</p>
                         <div class="row">
                             <div class="col-md-6 first-button">
                                 <div class="text-button">
-                                    <a href="#">Agregar al carrito</a>
+                                    <a href="/catalogo/buy/{{id_producto}}">Agregar al carrito</a>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="text-button">
-                                    <a href="#">Ver descripción</a>
+                                    <a href="/catalogo/single/{{id_producto}}">Ver descripción</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="featured-item">
-                    <div class="thumb">
-                        <img src="css/img/featured_item_2.jpg" alt="">
-                        <div class="overlay-content">
-                            <ul>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                            </ul>
-                        </div>
-                        <div class="date-content">
-                            <h6>20</h6>
-                            <span>September</span>
-                        </div>
-                    </div>
-                    <div class="down-content">
-                        <h4>Nullam nibh lacus</h4>
-                        <span>Category Two</span>
-                        <p>Mauris sit amet quam congue, pulvinar urna et, congue diam. Suspendisse eu lorem massa.
-                            Integer sit amet posuere.</p>
-                        <div class="row">
-                            <div class="col-md-6 first-button">
-                                <div class="text-button">
-                                    <a href="#">Agregar al carrito</a>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="text-button">
-                                    <a href="#">Ver descripción</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="featured-item">
-                    <div class="thumb">
-                        <img src="css/img/featured_item_3.jpg" alt="">
-                        <div class="overlay-content">
-                            <ul>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                            </ul>
-                        </div>
-                        <div class="date-content">
-                            <h6>12</h6>
-                            <span>October</span>
-                        </div>
-                    </div>
-                    <div class="down-content">
-                        <h4>Suspendisse semper non</h4>
-                        <span>Category Three</span>
-                        <p>Praesent iaculis gravida elementum. Proin fermentum neque facilisis semper pharetra. Sed
-                            vestibulum vehicula tincidunt.</p>
-                        <div class="row">
-                            <div class="col-md-6 first-button">
-                                <div class="text-button">
-                                    <a href="#">Agregar al carrito</a>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="text-button">
-                                    <a href="#">Ver descripción</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {{/each}}
         </div>
     </div>
 </section>
@@ -209,8 +111,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <span>Our Services</span>
-                    <h2>Best Template Site</h2>
+                    <span>Nuestro servicio</span>
+                    <h2>Mejor tienda de productos tecnologicos</h2>
                 </div>
             </div>
         </div>
@@ -220,9 +122,8 @@
                     <div class="icon">
                         <img src="css/img/service_icon_1.png" alt="">
                     </div>
-                    <h4>High Quality Design</h4>
-                    <p>Etiam viverra nibh at lorem hendrerit porta non nec ligula. Donec hendrerit porttitor pretium.
-                        Suspendisse fermentum nec risus.</p>
+                    <h4>Transparencia</h4>
+                    <p>Trabajamos con comunicacion y responsabilidad con el cliente.</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -230,9 +131,8 @@
                     <div class="icon">
                         <img src="css/img/service_icon_2.png" alt="">
                     </div>
-                    <h4>Fully Customizable</h4>
-                    <p>Vivamus nec vehicula felis, sit amet convallis ex. Aenean dolor risus, rutrum at tincidunt eget,
-                        placerat ac mauris.</p>
+                    <h4>Obtene tu producto en el dia</h4>
+                    <p>Somos rapidos en la entrega, totalmente personalizada para cada caso </p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -240,55 +140,8 @@
                     <div class="icon">
                         <img src="css/img/service_icon_3.png" alt="">
                     </div>
-                    <h4>Best HTML CSS Layout</h4>
-                    <p>Praesent nec dui sed urna pharetra dapibus at ac elit. Aenean hendrerit metus leo, quis viverra
-                        purus condimentum nec.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="down-services">
-                    <div class="row">
-                        <div class="col-md-5 col-md-offset-1">
-                            <div class="left-content">
-                                <h4>In hac habitasse platea dictumst</h4>
-                                <p>Aenean hendrerit metus leo, quis viverra purus condimentum nec. Pellentesque a sem
-                                    semper, lobortis mauris non, varius urna. Quisque sodales purus eu tellus
-                                    fringilla.<br><br>Mauris sit amet quam congue, pulvinar urna et, congue diam.
-                                    Suspendisse eu lorem massa. Integer sit amet posuere tellus, id efficitur leo. In
-                                    hac habitasse platea dictumst.</p>
-                                <div class="blue-button">
-                                    <a href="#">Ver catalogo</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="accordions">
-                                <ul class="accordion">
-                                    <li>
-                                        <a>Ut in dapibus ipsum</a>
-                                        <p>Nulla eget aliquet dui, vitae tincidunt nulla. Sed sagittis odio vitae auctor
-                                            volutpat. In semper ex neque, ut hendrerit mauris rutrum eget. Integer
-                                            consectetur neque eu enim dictum porta. Sed et risus ac sapien congue
-                                            mattis.</p>
-                                    </li>
-                                    <li>
-                                        <a>Vivamus ligula metus</a>
-                                        <p>Integer vel augue arcu. Fusce ac turpis cursus, malesuada nulla quis,
-                                            lobortis dui. Etiam blandit, erat efficitur rhoncus pellentesque, ligula
-                                            turpis tempor dolor.</p>
-                                    </li>
-                                    <li>
-                                        <a>Suspendisse dapibus</a>
-                                        <p>Nullam nibh lacus, rhoncus sit amet feugiat vel, porttitor sit amet nibh.
-                                            Pellentesque feugiat justo nec enim pretium, sed faucibus lacus aliquam. Sed
-                                            ac interdum mauris.</p>
-                                    </li>
-                                </ul> <!-- / accordion -->
-                            </div>
-                        </div>
-                    </div>
+                    <h4>Productos sellados</h4>
+                    <p>Trabajamos unicamente con productos sellados y garantia de fabrica para tu seguridad.</p>
                 </div>
             </div>
         </div>
@@ -299,78 +152,71 @@
 <!--Contacto de gigaphone-->
 
 
+<section id="contact">
 
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5">
-                <div class="about-veno">
-                    <div class="logo">
-                        <img src="css/img/gigaphone_Logo.png" alt="Venue Logo">
-                    </div>
-                    <p>Mauris sit amet quam congue, pulvinar urna et, congue diam. Suspendisse eu lorem massa. Integer
-                        sit amet posuere tellus, id efficitur leo. In hac habitasse platea dictumst.</p>
-                    <ul class="social-icons">
-                        <li>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-rss"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="useful-links">
-                    <div class="footer-heading">
-                        <h4>Useful Links</h4>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-stop"></i>Help FAQs</a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i>Register</a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i>Login</a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i>My Profile</a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i>How It Works?</a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i>More About Us</a></li>
-                            </ul>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="about-veno">
+                        <div class="logo">
+                            <img src="css/img/gigaphone_Logo.png" alt="Venue Logo">
                         </div>
-                        <div class="col-md-6">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-stop"></i>Our Clients</a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i>Partnerships</a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i>Blog Entries</a></li>
-                                <li><a href="#"><i class="fa fa-stop"></i>Contact Us</a></li>
-                            </ul>
+                        <p>Somos una empresa joven, que busca insertarse en el mercado con la posibilidad de vender
+                            productos tecnologicos
+                            a un precio accessible para todo el publico.
+                        </p>
+                        <ul class="social-icons">
+                            <li>
+                                <a href="https://www.instagram.com/gigaphone.gph/"><i class="fa fa-instagram"></i></a>
+                                <a href="/"><i class="fa fa-twitter"></i></a>
+                                <a href="/"><i class="fa fa-linkedin"></i></a>
+                                <a href="/"><i class="fa fa-rss"></i></a>
+                                <a href="/"><i class="fa fa-dribbble"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="useful-links">
+                        <div class="footer-heading">
+                            <h4>Más</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li><a href="/registro"><i class="fa fa-stop"></i>Registrate</a></li>
+                                    <li><a href="/login"><i class="fa fa-stop"></i>Login</a></li>
+
+                                </ul>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="contact-info">
-                    <div class="footer-heading">
-                        <h4>Contact Information</h4>
+                <div class="col-md-3">
+                    <div class="contact-info">
+                        <div class="footer-heading">
+                            <h4>Informacion</h4>
+                        </div>
+                        <p>Te dejamos nuestros datos de contacto, en caso de que quieras hablar con algun representante.</p>
+                        <ul>
+                            <li><span>Telefono:</span><a href="#">3513249117</a></li>
+                            <li><span>Email:</span><a href="#">gigaphone@gmail.com</a></li>
+                            <li><span>Direccion:</span><a href="#">Av. Gral. Paz 256, Cordoba.</a></li>
+                        </ul>
                     </div>
-                    <p>Praesent iaculis gravida elementum. Proin fermentum neque facilisis semper pharetra. Sed
-                        vestibulum vehicula tincidunt.</p>
-                    <ul>
-                        <li><span>Phone:</span><a href="#">010-050-0550</a></li>
-                        <li><span>Email:</span><a href="#">hi@company.co</a></li>
-                        <li><span>Address:</span><a href="#">company.co</a></li>
-                    </ul>
                 </div>
             </div>
         </div>
+    </footer>
+
+    <div class="sub-footer">
+        <p>Copyright &copy; 2021 Gigaphone
+
+            - Design: <a rel="nofollow" href="#">Santiago Ibarbia</a></p>
     </div>
-</footer>
-
-<div class="sub-footer">
-    <p>Copyright &copy; 2021 Gigaphone
-
-        - Design: <a rel="nofollow" href="#">Santiago Ibarbia</a></p>
-</div>
+</section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>

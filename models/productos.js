@@ -53,6 +53,12 @@ const delProducto = async (id) => {
     return await pool.query(query, params);
 }
 
+const getTresProd = async ()=> {
+    const query = "SELECT * FROM ?? JOIN ?? ON categorias.id = productos.id_categoria JOIN ?? ON productos_imagenes.id_producto = productos.id where productos.eliminado = 0 ORDER BY rand() LIMIT 3 ";
+    const params = [process.env.T_PRODUCTOS, process.env.T_CATEGORIAS, process.env.T_PRODUCTOSIMG];
+    return await pool.query(query, params);
+}
+
 module.exports = {
     getAllProd,
     getSingleProd,
@@ -62,5 +68,6 @@ module.exports = {
     createImg,
     updateImg,
     deleteImg,
-    buscar
+    buscar,
+    getTresProd
 };

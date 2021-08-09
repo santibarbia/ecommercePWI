@@ -12,11 +12,11 @@
                     </a>
                     <nav id="primary-nav" class="dropdown cf">
                         <ul class="dropdown menu">
-                            <li class='active'><a href="/admin/producto/create">Crear Producto</a></li>
+                            <li class='active'><a href="/">Home</a></li>
 
-                            <li><a class="scrollTo" data-scrollTo="blog" href="/admin/usuario">Usuarios</a></li>
-                            <li><a class="scrollTo" data-scrollTo="services" href="/admin/categoria">Categorias</a></li>
-                            <li><a class="scrollTo" data-scrollTo="contact" href="/catalogo">Catalogos</a></li>
+                            <li><a class="scrollTo" data-scrollTo="blog" href="/registro">Registrarse</a></li>
+                            
+                            <li><a class="scrollTo" data-scrollTo="contact" href="/catalogo">Catalogo</a></li>
                         </ul>
                     </nav><!-- / #primary-nav -->
                 </div>
@@ -27,7 +27,7 @@
 
 
 
-<div class="container-fluid bg-light" style="height:100vh">
+<div class="container-fluid bg-light">
     <div class="row justify-content-center aling-item-center mt-5" style="height:100vh">
         <div class="col-7 text-dark">
             <div class="container">
@@ -39,29 +39,43 @@
                         </div>
                     </div>
                 </div>
-                <form method="POST" action="/login">
-                    <div class="col-6 text-center">
-                        <div class="mb-3">
-                            <label for="username" class="form-label">Ingrese username<span
-                                    class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="username" name="username">
-                        </div>
-                        <div class="mb-3">
-                            <label for="pass" class="form-label">Ingrese password<span
-                                    class="text-danger">*</span></label>
-                            <input type="password" class="form-control" id="pass" name="pass">
-                        </div>
-
-                        <button type="submit"
-                                class="btn btn-primary">Iniciar Sesion</button>
-                                <div class="row">
-                                   <span>{{message}}</span> 
+                <div class="row ">
+                        <form method="POST" action="/login">
+                            <div class="col-md-12 text-center">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6 mb-3">
+                                    <label for="username" class="form-label">Ingrese username<span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="username" name="username">
                                 </div>
-                        
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6 mb-3">
+                                    <label for="pass" class="form-label">Ingrese password<span
+                                            class="text-danger">*</span></label>
+                                    <input type="password" class="form-control" id="pass" name="pass">
+                                </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6">
+                                        <button type="submit" class="btn btn-info btn-lg">Iniciar Sesion</button>
+                                    </div>
+                                     
+                                </div>
+                               
+                                <div class="row">
+                                    <span class="text-danger">{{message}}</span>
+                                </div>
 
+                           
+                        </form>
+                         
                     </div>
 
-                </form>
+
+                </div>
+
+
             </div>
         </div>
     </div>

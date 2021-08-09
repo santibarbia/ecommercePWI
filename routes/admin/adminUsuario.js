@@ -62,11 +62,13 @@ const showActualizar = async (req, res) => {
     const userId = req.params.id;
     const [single] = await getSingle(userId);
     const usuario = {
+        id: userId,
         nombre:single.nombre,
         username:single.username,
         mail:single.mail,
         pass:single.pass,
-        telefono:single.telefono,      
+        telefono:single.telefono, 
+        admin:single.admin     
     }
 
     console.log(usuario);
@@ -83,6 +85,7 @@ const actualizar = async (req, res) => {
         pass:sha1(user.pass),
         telefono:user.telefono,
         mail:user.mail,
+        admin:user.admin
     }
     const {insertId} = await update(id,usuario);
     console.log(usuario);

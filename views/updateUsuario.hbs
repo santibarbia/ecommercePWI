@@ -1,14 +1,38 @@
-<nav class="navbar navbar-light bg-light">
-  <div class="container justify-content-center">
-    <a class="navbar-brand" href="#">
-      <img src="/css/img/gigaphone_Logo.png" alt="">
-    </a>
-  </div>
-</nav>
+<div class="wrap">
+    <!--Navbar-->
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <button id="primary-nav-button" type="button">Menu</button>
+                    <a href="index.html">
+                        <div class="logo">
+                            <img src="/css/img/gigaphone_Logo.png" class="img-fluid" alt="">
+                        </div>
+                    </a>
+                    <nav id="primary-nav" class="dropdown cf">
+                        <ul class="dropdown menu">
+                            <li class='active'><a href="/admin/usuario">Volver atras</a></li>
+                        </ul>
+                    </nav><!-- / #primary-nav -->
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+
 <div class="container-fluid bg-light" style="height:100vh">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="section-heading">
+                <span>#GigaphoneExperience</span>
+                <h2>Actualizar Usuario</h2>
+            </div>
+        </div>
+    </div>
     <div class="row justify-content-center aling-item-center" style="height:100vh">
         <div class="col-7 text-dark">
-            <form method="POST" action="/admin/usuario/update/{{single.id}}" enctype="multipart/form-data">
+            <form method="POST" action="/admin/usuario/update/{{usuario.id}}">
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Ingrese nombre<span class="text-danger">*</span></label>
                     <input type="text" value="{{usuario.nombre}}" class="form-control" id="nombre" name="nombre">
@@ -18,8 +42,8 @@
                     <input type="text" value="{{usuario.username}}" class="form-control" id="username" name="username">
                 </div>
                 <div class="mb-3">
-                    <label for="pass" class="form-label">Ingrese password<span class="text-danger">*</span></label>
-                    <input type="password" value="{{usuario.pass}}" class="form-control" id="pass" name="pass">
+                    <label for="pass" class="form-label">Ingrese password actualizada<span class="text-danger">*</span></label>
+                    <input type="password" class="form-control" id="pass" name="pass">
                 </div>
                 
                 <div class="mb-3">

@@ -1,10 +1,17 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const modelProducto = require('../models/productos');
+
+
+
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/', async function (req, res, next) {
+  const producto = await modelProducto.getTresProd();
+  console.log(producto);
+  res.render('index', { producto });
 });
+
 
 
 
